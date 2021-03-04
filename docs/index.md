@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/Hootlook/Idboard-Android/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[API-mockup](API-mockup.md)  
+[API mockup](API-mockup.md)  
 [Calendrier](Calendrier.md)  
 [Contact](Contact.md)  
 [Drawer](Drawer.md) 
