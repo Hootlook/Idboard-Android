@@ -4,17 +4,17 @@ You can use the [editor on GitHub](https://github.com/Hootlook/Idboard-Android/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[API-mockup](API-mockup.md)
-[Calendrier](Calendrier.md)
-[Certificat de scolarité](Certificat-de-scolarité.md)
-[Contact](Contact.md)
-[Convention de stage](Convention-de-stage.md)
-[Drawer](Drawer.md)
-[Events "Mes messages"](Events-(Mes-messages).md)
-[Login](Login.md)
-[Marks "Relevés de Notes"](Marks-(Relevés-de-Notes).md)
-[Offres de Stage](Offres-de-Stage.md)
-[Trombinoscope](Trombinoscope.md)
+[API-mockup](API-mockup.md).
+[Calendrier](Calendrier.md).
+[Certificat de scolarité](Certificat-de-scolarité.md).
+[Contact](Contact.md).
+[Convention de stage](Convention-de-stage.md).
+[Drawer](Drawer.md).
+[Events "Mes messages"](Events-(Mes-messages).md).
+[Login](Login.md).
+[Marks "Relevés de Notes"](Marks-(Relevés-de-Notes).md).
+[Offres de Stage](Offres-de-Stage.md).
+[Trombinoscope](Trombinoscope.md).
 
 ### Markdown
 
