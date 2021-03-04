@@ -6,15 +6,16 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 [API-mockup](API-mockup.md)  
 [Calendrier](Calendrier.md)  
-[Certificat de scolarité](Certificat-de-scolarité.md)  
 [Contact](Contact.md)  
-[Convention de stage](Convention-de-stage.md)  
-[Drawer](Drawer.md)  
-[Events "Mes messages"](Events-(Mes-messages).md)  
+[Drawer](Drawer.md) 
 [Login](Login.md)  
-[Marks "Relevés de Notes"](Marks-(Relevés-de-Notes).md)  
 [Offres de Stage](Offres-de-Stage.md)  
 [Trombinoscope](Trombinoscope.md)  
+[Certificat de scolarité](Certificat-de-scolarité.md)  
+[Convention de stage](Convention-de-stage.md)  
+[Events "Mes messages"](Events-(Mes-messages).md)  
+[Marks "Relevés de Notes"](Marks-(Relevés-de-Notes).md)  
+
 
 ### Markdown
 
