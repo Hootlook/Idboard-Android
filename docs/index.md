@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Bienvenu dans la documentation du projet Idboard Android
 
-You can use the [editor on GitHub](https://github.com/Hootlook/Idboard-Android/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Vous trouverez ici divers documentations sur des aspects de l'application par les développeurs 
 
 [API mockup](API-mockup.md)  
 [Calendrier](Calendrier.md)  
