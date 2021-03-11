@@ -1,4 +1,4 @@
-## Bienvenu dans la documentation du projet Idboard Android
+## Bienvenue dans la documentation du projet Idboard Android
 
 Vous trouverez ici divers documentations sur des aspects de l'application par les développeurs 
 
