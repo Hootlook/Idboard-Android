@@ -6,6 +6,7 @@ Vous trouverez ici divers documentations sur des aspects de l'application par le
 [Calendrier](Calendrier.md)  
 [Contact](Contact.md)  
 [Drawer](Drawer.md) 
+[Messages](Message.md) 
 [Login](Login.md)  
 [Offres de Stage](Offres-de-Stage.md)  
 [Trombinoscope](Trombinoscope.md)  
