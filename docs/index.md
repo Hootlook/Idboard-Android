@@ -9,6 +9,7 @@ Vous trouverez ici divers documentations sur des aspects de l'application par le
 [Messages](Message.md) 
 [Login](Login.md)  
 [Offres de Stage](Offres-de-Stage.md)  
+[Petites Annonces](Petites-Annonces.md)  
 [Trombinoscope](Trombinoscope.md)  
 [Certificat de scolarité](Certificat-de-scolarité.md)  
 [Convention de stage](Convention-de-stage.md)  
