@@ -19,7 +19,7 @@ Explication des paramètres :
 
 <p>On récupère nos messages globaux grâce à notre service qui est le suivant</p>
 
-    `apiService.getAll {
+    apiService.getAll {
     	if(it != null) {
 	    	val adapter = MessageAdapter(it)
 		    loader?.visibility = View.GONE
@@ -27,7 +27,7 @@ Explication des paramètres :
 		    recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 		    recyclerView.adapter = adapter
 	    }
-     }`
+     }
 
 
 <p>Notre fonction s'occupe ensuite d'initialiser un adapter (<Strong>MessageAdapter</strong>) qui remplira une recyclerView.</p>
