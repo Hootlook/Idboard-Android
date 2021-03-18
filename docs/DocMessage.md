@@ -8,8 +8,10 @@ MessagesGlobauxActivity est l'activité principale pour les messages globaux. El
 
 On commence par une liste de variable
 
-    `var loader: ProgressBar? = null
-	 val apiService = MessageService()`
+```kotlin
+    	var loader: ProgressBar? = null
+	val apiService = MessageService()
+```
 
 Explication des paramètres :
 <ul>
@@ -19,6 +21,7 @@ Explication des paramètres :
 
 <p>On récupère nos messages globaux grâce à notre service qui est le suivant</p>
 
+```kotlin
     apiService.getAll {
     	if(it != null) {
 	    	val adapter = MessageAdapter(it)
@@ -28,7 +31,7 @@ Explication des paramètres :
 		    recyclerView.adapter = adapter
 	    }
      }
-
+```
 
 <p>Notre fonction s'occupe ensuite d'initialiser un adapter (<Strong>MessageAdapter</strong>) qui remplira une recyclerView.</p>
 
