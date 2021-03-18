@@ -10,7 +10,6 @@ Vous trouverez ici divers documentations sur des aspects de l'application par le
 [Login](Login.md)  
 [Offres de Stage](Offres-de-Stage.md)  
 [Trombinoscope](Trombinoscope.md)  
-[Trombinoscope AB](Trombinoscope-AB.md)  
 [Certificat de scolarité](Certificat-de-scolarité.md)  
 [Convention de stage](Convention-de-stage.md)  
 [Events "Mes messages"](Events-(Mes-messages).md)  
