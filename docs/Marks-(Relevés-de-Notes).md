@@ -1,14 +1,11 @@
 # INTRO
 
-The module is responsible for displaying user's marks.
+Ce module affiche les notes des utilisateurs
 
 The entry point is a list of domains: [Domains view mockup](https://zpl.io/b67NY1W).
 
-It uses HTTP service to get the data.
-
 By clicking a domain user have a possibility to see detailed marks for the chosen domain: [Detailed marks view mockup](https://zpl.io/a7BOM4K)
 
-Ce module gere l'affichage 
 
 ##  Architecture
 
@@ -255,6 +252,5 @@ fragmentMattersWithMarks?.arguments = fragmentData
 ## Service
 The service is responsible for collecting the data (all domains with matters and mark for the user).
 ```kotlin
-fun getAllMarksForAStudent(onResult: (List<Domain>?) -> Unit){
-    }
+fun getAllMarksForAStudent(onResult: (List<Domain>?) -> Unit){ }
 ```
