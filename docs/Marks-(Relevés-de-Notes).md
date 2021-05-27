@@ -49,12 +49,11 @@ On récupère nos notes grâce à notre service qui est le suivant
 
 Notre fonction s'occupe ensuite d'initialiser un adapter (**MessageAdapter**) qui remplira une recyclerView.
 
-
 ### Activity.kt
 
-The module's entry point is an activity: `fr/campusid/idboard/activities/MarksActivity.kt`
+Le point d'entré du module est une activité: `fr/campusid/idboard/activities/MarksActivity.kt`
 
-The activity hosts two fragments responsible for two views: Domain View and Matters with Marks View:
+L'activité héberge deux fragments résponssable pour l'affichage de deux vue: la vue "Domain" et "Matters" avec Marks View:
 
 ```kotlin
 private var fragmentDomains: Fragment? = null
@@ -64,7 +63,7 @@ The activity is responsible for:
 - requesting the data using the HTTP service:
 
 ```kotlin
-apiService.getAllMarksForAStudent {}
+apiService.getAllMarksForAStudent { }
 ```
 - managing (displaying) the fragments:
 ```kotlin
@@ -111,11 +110,11 @@ Layout for the activity: `layout/activity_marks.xml`
 
 ### DomainsFragment.kt
 
-The fragment is responsible for displaying all the domains data.
+Ce fragment affiche les données de tous les domaines.
 
-It uses [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) to display a list of customized graphical elements (domains).
+Il utilise [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) pour afficher une liste customizé d'éléments graphique (domains).
 
-Recyclerview requires the adapter ( `DomainListViewAdapter.kt` ) and a ViewHolder ( `DomainViewHolder.kt` ) to assign the content to the right graphical element in `component_domain.xml`.
+Recyclerview requiere l'adapteur ( `DomainListViewAdapter.kt` ) et le ViewHolder ( `DomainViewHolder.kt` ) pour assigner les contenu sur le bon élément graphique dans `component_domain.xml`.
 
 `DomainListViewAdapter.kt`
 
@@ -150,19 +149,18 @@ fun bind(domain: Domain) {
     android:text="@string/module_name"
     android:textSize="19sp" />
 ```
-Fragment implements a custom interface `OnModuleClickListener` to detect user's click what he/she wants to see details of the chosen domain:
+Ce fragment implemente une interface custome `OnModuleClickListener` pour détecter le clic d'un utilisateur et le redirige sur le bon domaine:
 ```kotlin
 override fun onModuleClick(position: Int) {  
   (activity as MarksActivity).goToMarks(position)  
 }
 ```
 
-
-Layout for the fragment: `layout/fragment_domains.xml`.
+Layout pour le fragment: `layout/fragment_domains.xml`.
 
 ### MattersWithMarksFragment.kt
 
-The fragment is responsible for displaying the Matters with Marks
+Ce fragment affiche les matières avec les notes.
 
 It uses two nested [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) to display a list of Matters with nested list of Marks.
 
