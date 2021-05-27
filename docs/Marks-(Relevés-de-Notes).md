@@ -59,13 +59,12 @@ L'activité héberge deux fragments résponssable pour l'affichage de deux vue: 
 private var fragmentDomains: Fragment? = null
 private var fragmentMattersWithMarks: Fragment? = null
 ```
-The activity is responsible for:
-- requesting the data using the HTTP service:
+L'activité crée la requete au près du service 
 
 ```kotlin
 apiService.getAllMarksForAStudent { }
 ```
-- managing (displaying) the fragments:
+- Affiche les fragments:
 ```kotlin
 private fun replaceFragment(fragment: Fragment) {
     val fm: FragmentManager = supportFragmentManager
@@ -99,14 +98,14 @@ fun goToDomains() {
     currentFragment = "domains"  
 }
 ```
-- and passing Data into the fragment:
+- et passe les données dans le fragment:
 
 ```kotlin
 fragmentData.putParcelableArrayList("matters", matters as ArrayList<Matter>)
 fragmentMattersWithMarks?.arguments = fragmentData
 ```
 
-Layout for the activity: `layout/activity_marks.xml`
+Layout pour l'activité: `layout/activity_marks.xml`
 
 ### DomainsFragment.kt
 
@@ -164,7 +163,7 @@ Ce fragment affiche les matières avec les notes.
 
 It uses two nested [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) to display a list of Matters with nested list of Marks.
 
-Two adapters (`MatterAdapter.kt` and `MarkAdapter.kt`) and a two ViewHolders (class ViewHolder in `MatterAdapter.kt` and `MarkAdapter.kt`) are required to assign the content to the right graphical element in `component_matter.xml` and `component_mark.xml`.
+Deux adapteurs (`MatterAdapter.kt` et `MarkAdapter.kt`) et deux ViewHolders (classe ViewHolder dans `MatterAdapter.kt` et `MarkAdapter.kt`) sont nécéssaires pour injecter le contenu dans le bon element graphique dans `component_matter.xml` et `component_mark.xml`.
 
 `MarkAdapter.kt`
 
@@ -201,7 +200,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
     android:text="@string/mark_subject"
     android:textSize="19sp" />
 ```
-Fragment contains also an `onClickListener` to detect user's input if he/she wants to change the view (go back to list of Domains):
+Ce fragment contient également un `onClickListener` pour détécter les saisie de l'utilsateur si il/elle veut changer de vue (retourner sur la liste des Domaines):
 ```kotlin
 View.OnClickListener {  
     (activity as MarksActivity).goToDomains()  
@@ -209,9 +208,9 @@ View.OnClickListener {
 ```
 Layout for the fragment: `layout/fragment_matters_with_marks.xml`
 
-## Data model
+## Model des données
 
-Three classes are created to hold three levels of nested data for the module: `Domain.kt`, `Matter.kt` and `Mark.kt`.
+Trois classes sont crées pour contenir trois niveau de données pour le module: `Domain.kt`, `Matter.kt` et `Mark.kt`.
 
 `Mark.kt`
 
@@ -240,7 +239,7 @@ data class Mark(
 
 )
 ```
-```@Parcelize``` annotation is used to be able to send the data between fragments.
+```@Parcelize``` Cet attribu est utilisé pour tranférer les données entre les fragments.
 
 ```kotlin
 fragmentData.putParcelableArrayList("matters", matters as ArrayList<Matter>)
@@ -248,7 +247,7 @@ fragmentMattersWithMarks?.arguments = fragmentData
 ```
 
 ## Service
-The service is responsible for collecting the data (all domains with matters and mark for the user).
+Ce service fait la requète et récupere les données (tous domaines avec les Matières et Notes pour l'utilisateur)
 ```kotlin
 fun getAllMarksForAStudent(onResult: (List<Domain>?) -> Unit){ }
 ```
