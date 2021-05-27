@@ -10,7 +10,48 @@ By clicking a domain user have a possibility to see detailed marks for the chose
 
 ##  Architecture
 
-#### Activity.kt
+### MarksActivity.kt
+
+MarksActivity est l'activité principale pour les notes. Elle va récupérer la liste des notes via le service **MarkService.kt**
+
+On commence par une liste de variable
+
+```kotlin
+var loader: ProgressBar? = null
+var apiService = MarkService()
+```
+
+Explication des paramètres :
+
+1. loader sert pour la barre de chargement
+2. apiService permet de faire appel à notre **MarkService.kt**
+
+On récupère nos notes grâce à notre service qui est le suivant
+
+```kotlin
+    `apiService.getContext(this@MarksActivity)
+     apiService.getAllMarksForAStudent {
+        if(it!=null){
+            loader?.visibility = View.GONE
+            var domains = it
+            if (domains != null) {
+                domainList = domains as List<Domain>
+                fragmentData.putParcelableArrayList("domains", domains as ArrayList<Domain>)
+                fragmentDomains?.arguments = fragmentData
+                if (!fragmentDomains!!.isAdded) {
+                    fm.beginTransaction().add(R.id.frame_container, fragmentDomains as DomainsFragment)
+                                .commit()
+                    currentFragment = "domains"
+                }
+            }
+        }
+    }
+```
+
+Notre fonction s'occupe ensuite d'initialiser un adapter (**MessageAdapter**) qui remplira une recyclerView.
+
+
+### Activity.kt
 
 The module's entry point is an activity: `fr/campusid/idboard/activities/MarksActivity.kt`
 
@@ -69,7 +110,7 @@ fragmentMattersWithMarks?.arguments = fragmentData
 
 Layout for the activity: `layout/activity_marks.xml`
 
-#### DomainsFragment.kt
+### DomainsFragment.kt
 
 The fragment is responsible for displaying all the domains data.
 
@@ -120,7 +161,7 @@ override fun onModuleClick(position: Int) {
 
 Layout for the fragment: `layout/fragment_domains.xml`.
 
-#### MattersWithMarksFragment.kt
+### MattersWithMarksFragment.kt
 
 The fragment is responsible for displaying the Matters with Marks
 
