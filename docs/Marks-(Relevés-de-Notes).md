@@ -111,7 +111,7 @@ Layout pour l'activité: `layout/activity_marks.xml`
 
 Ce fragment affiche les données de tous les domaines.
 
-Il utilise [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) pour afficher une liste customizé d'éléments graphique (domains).
+Il utilise [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) pour afficher une liste customisé d'éléments graphique (domains).
 
 Recyclerview requiere l'adapteur ( `DomainListViewAdapter.kt` ) et le ViewHolder ( `DomainViewHolder.kt` ) pour assigner les contenu sur le bon élément graphique dans `component_domain.xml`.
 
@@ -163,7 +163,7 @@ Ce fragment affiche les matières avec les notes.
 
 It uses two nested [Recyclerview](https://developer.android.com/jetpack/androidx/releases/recyclerview) to display a list of Matters with nested list of Marks.
 
-Deux adapteurs (`MatterAdapter.kt` et `MarkAdapter.kt`) et deux ViewHolders (classe ViewHolder dans `MatterAdapter.kt` et `MarkAdapter.kt`) sont nécéssaires pour injecter le contenu dans le bon element graphique dans `component_matter.xml` et `component_mark.xml`.
+Deux adapteurs (`MatterAdapter.kt` et `MarkAdapter.kt`) et deux ViewHolders (classe ViewHolder dans `MatterAdapter.kt` et `MarkAdapter.kt`) sont nécéssaires pour injecter le contenu dans le bon élément graphique dans `component_matter.xml` et `component_mark.xml`.
 
 `MarkAdapter.kt`
 
@@ -200,17 +200,17 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
     android:text="@string/mark_subject"
     android:textSize="19sp" />
 ```
-Ce fragment contient également un `onClickListener` pour détécter les saisie de l'utilsateur si il/elle veut changer de vue (retourner sur la liste des Domaines):
+Ce fragment contient également un `onClickListener` pour détecter les saisies de l'utilsateur si il veut changer de vue (retourner sur la liste des Domaines):
 ```kotlin
 View.OnClickListener {  
     (activity as MarksActivity).goToDomains()  
 }
 ```
-Layout for the fragment: `layout/fragment_matters_with_marks.xml`
+Layout pour le fragment: `layout/fragment_matters_with_marks.xml`
 
 ## Model des données
 
-Trois classes sont crées pour contenir trois niveau de données pour le module: `Domain.kt`, `Matter.kt` et `Mark.kt`.
+Trois classes sont crées pour contenir trois niveaux de données pour le module: `Domain.kt`, `Matter.kt` et `Mark.kt`.
 
 `Mark.kt`
 
@@ -239,7 +239,7 @@ data class Mark(
 
 )
 ```
-```@Parcelize``` Cet attribu est utilisé pour tranférer les données entre les fragments.
+```@Parcelize``` Cet attribut est utilisé pour tranférer les données entre les fragments.
 
 ```kotlin
 fragmentData.putParcelableArrayList("matters", matters as ArrayList<Matter>)
