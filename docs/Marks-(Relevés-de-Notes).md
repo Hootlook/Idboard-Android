@@ -8,6 +8,8 @@ It uses HTTP service to get the data.
 
 By clicking a domain user have a possibility to see detailed marks for the chosen domain: [Detailed marks view mockup](https://zpl.io/a7BOM4K)
 
+Ce module gere l'affichage 
+
 ##  Architecture
 
 ### MarksActivity.kt
