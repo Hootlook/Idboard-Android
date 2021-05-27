@@ -1,4 +1,4 @@
-<h1>Résumé</h1>
+# Résumé
 Le module affiche le calendrier ainsi qu'une liste de cours et/ou partiels.
 
 En cliquant sur un jour en particulier, on obtient une liste détaillé sur notre journée de cours.
@@ -8,14 +8,14 @@ Pour notre appel http, on se base [sur un appel vers l'api](http://idboard.net:9
 On utilise cette [librairie](https://github.com/SundeepK/CompactCalendarView).
 
 
-<h1>Architecture</h1>
+# Architecture
 
 <h3><a name="mainActivity">MainActivity.kt</a></h3>
 
 MainActivity contient toutes les informations nécessaires pour pouvoir utiliser le calendrier, ainsi que pour afficher les cours.
 
 On commence par une liste de variable
-```
+```kotlin
 val showPreviousMonth = findViewById<View>(R.id.prev_button)
 val selectedMonth = findViewById(R.id.monthOfCalendar) as TextView
 val showNextMonth = findViewById<View>(R.id.next_button)
@@ -35,7 +35,7 @@ Explication des paramètres :
 
 
 On récupère la liste des cours grâce à notre service qui est le suivant
-```
+```kotlin
  CoursesService().getAll(onCoursResponse, this)
 ```
 La fonction onMessageResponse s'occupe ensuite d'initialiser un [adapter](#coursListadapter) qui remplira une recyclerView qui est ici listView.
@@ -51,7 +51,7 @@ Un événement contient :
 - Prénom du professeur
 - Nom du professeur
 
-```       
+```kotlin       
         for (cours in listCours) {
             val pattern = "HH:mm"
             val simpleDateFormat = SimpleDateFormat(pattern, Locale.FRANCE)
@@ -88,7 +88,7 @@ La fonction onErrorResponse affiche un [toast](https://developer.android.com/gui
 
 Notre calendrier utilise des paramètres provenant directement de la librairie comme 
 
-```
+```kotlin
 compactCalendarView.setFirstDayOfWeek(Calendar.MONDAY)
 compactCalendarView.setLocale(TimeZone.getDefault(), Locale.FRANCE)
 compactCalendarView.setUseThreeLetterAbbreviation(true)
@@ -103,7 +103,7 @@ Lors d'un appel à l'api , nous recevons toute une liste de cours
 .
 Pour pouvoir afficher uniquement les cours du jour sélectionné ( lors d'un clique sur une date) , on a du créer un évenement lors d'un clique sur le calendrier.
 
-```
+```kotlin
 compactCalendarView.setListener(object : CompactCalendarViewListener {
             override fun onDayClick(dateClicked: Date) {
                 adapter.coursList = listCours.filter {
@@ -168,7 +168,7 @@ Petite particularité de cette classe :
 
 - Elle contient une fonction createColor pour ajouter un # à notre backgroundColor afin d'avoir une couleur sous format hexadecimal.
 - Elle contient
-```       
+```kotlin       
 val pattern = "yyyy-MM-dd'T'HH:mm:ss"
 val simpleDateFormat = SimpleDateFormat(pattern, Locale.FRANCE)
 ```
