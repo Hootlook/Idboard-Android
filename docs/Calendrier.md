@@ -59,15 +59,28 @@ Un événement contient :
             val horaireFin = simpleDateFormat.format(cours.dateEnd)
             // on crée un evenement avec la couleur , la date , et les informations necessaires
             val ev = Event(
-                cours.backGroundColor,
-                cours.dateStart.time,
-                horaireDebut + " - " + horaireFin + "\n" + cours.descriptionDefaultValue + "\n" + cours.teacherFirstname + " " + cours.teacherName
-            )
+                        createColor(currentCour.backgroundColor),
+                        zdtS.toInstant().toEpochMilli(),
+                        horaireDebut+ " - " + horaireFin + "\n" + currentCour.label + "\n" + currentCour.teacherDetails.firstName + " " + currentCour.teacherDetails.lastName
+                )
             // on ajoute l'evenement
             compactCalendarView.addEvent(ev)
         }
 ```
 On utilise un pattern pour afficher uniquement l'heure et les minutes sur un cours.
+
+Une fonction permet de créer la couleur par rapport au String envoyé par l'api.
+
+```kotlin
+
+    private fun createColor(colorString : String ) : Int{
+        var color = "#" + colorString
+        // on convertit en Int
+        color = Color.parseColor(color).toString()
+        return color.toInt()
+    }
+
+```
 
 Pour placer le cours à une date , on utilise le .time pour pouvoir avoir la date en millisecondes (obligatoire sur ce calendrier).
 
