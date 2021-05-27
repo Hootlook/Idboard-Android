@@ -20,7 +20,7 @@ On commence par une liste de variable
 
 ```kotlin
 var loader: ProgressBar? = null
-var apiService = MarkService()
+val apiService = MarkService()
 ```
 
 Explication des paramètres :
