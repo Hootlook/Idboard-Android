@@ -29,7 +29,7 @@ Explication des paramètres :
 On récupère nos notes grâce à notre service qui est le suivant
 
 ```kotlin
-    `apiService.getContext(this@MarksActivity)
+     apiService.getContext(this@MarksActivity)
      apiService.getAllMarksForAStudent {
         if(it!=null){
             loader?.visibility = View.GONE
