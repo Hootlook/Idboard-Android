@@ -81,6 +81,7 @@ private fun replaceFragment(fragment: Fragment) {
     }.commit()
 }
 ```
+
 ```kotlin
 fun goToMarks(position: Int) {  
     val matters = domainList[position].matters  
@@ -90,6 +91,7 @@ fun goToMarks(position: Int) {
     currentFragment = "matters"  
 }
 ```
+
 ```kotlin
 fun goToDomains() {  
     replaceFragment(fragmentDomains as DomainsFragment)  
@@ -97,6 +99,7 @@ fun goToDomains() {
     currentFragment = "domains"  
 }
 ```
+
 - et passe les données dans le fragment:
 
 ```kotlin
@@ -148,6 +151,7 @@ fun bind(domain: Domain) {
     android:textSize="19sp" />
 ```
 Ce fragment implemente une interface custome `OnModuleClickListener` pour détecter le clic d'un utilisateur et le redirige sur le bon domaine:
+
 ```kotlin
 override fun onModuleClick(position: Int) {  
   (activity as MarksActivity).goToMarks(position)  
@@ -199,6 +203,7 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
     android:text="@string/mark_subject"
     android:textSize="19sp" />
 ```
+
 Ce fragment contient également un `onClickListener` pour détecter les saisies de l'utilsateur si il veut changer de vue (retourner sur la liste des Domaines):
 ```kotlin
 View.OnClickListener {  
@@ -248,5 +253,5 @@ fragmentMattersWithMarks?.arguments = fragmentData
 ## Service
 Ce service fait la requète et récupere les données (tous domaines avec les Matières et Notes pour l'utilisateur)
 ```kotlin
-fun getAllMarksForAStudent(onResult: (List<Domain>?) -> Unit){ }
+fun getAllMarksForAStudent(onResult: (List<Domain>?) -> Unit) { }
 ```
