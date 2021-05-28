@@ -1,5 +1,4 @@
 # INTRO
-<h3><a name="ConventionStageActivity">ConventionStageActivity.kt</a></h3>
 
 Ce module affiche les notes des utilisateurs
 
