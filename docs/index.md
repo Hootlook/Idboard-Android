@@ -3,6 +3,7 @@
 Vous trouverez ici divers documentations sur des aspects de l'application par les développeurs 
 
 [API mockup](API-mockup.md)  
+[Chat](Chat.md)
 [Calendrier](Calendrier.md)  
 [Contact](Contact.md)  
 [Drawer](Drawer.md) 
