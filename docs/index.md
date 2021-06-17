@@ -2,12 +2,12 @@
 
 Vous trouverez ici divers documentations sur des aspects de l'application par les développeurs 
 
-[API mockup](API-mockup.md)  
-[Chat](Chat.md)
-[Calendrier](Calendrier.md)  
+[API mockup](API-mockup.md)   
+[Chat](Chat.md)  
+[Calendrier](Calendrier.md)    
 [Contact](Contact.md)  
-[Drawer](Drawer.md) 
-[Messages](Message.md) 
+[Drawer](Drawer.md)  
+[Messages](Message.md)   
 [Login](Login.md)  
 [Offres de Stage](Offres-de-Stage.md)  
 [Petites Annonces](Petites-Annonces.md)  
