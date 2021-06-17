@@ -16,4 +16,4 @@ Vous trouverez ici divers documentations sur des aspects de l'application par le
 [Certificat de scolarité](Certificat-de-scolarité.md)  
 [Convention de stage](Convention-de-stage.md)  
 [Mes messages](Mes-messages.md)  
-[Marks "Relevés de Notes"](Marks-(Relevés-de-Notes).md)  
+[Relevés de Notes](Notes.md)  
